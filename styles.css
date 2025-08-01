@@ -209,7 +209,7 @@ body {
   background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
   background-repeat: repeat;
   animation: bg-noise-animation .2s infinite;
-  opacity: 0.75;
+  opacity: 0.45;
   visibility: visible;
 }
 
@@ -265,6 +265,7 @@ body {
 
 .nav-logo {
   flex-shrink: 0;
+  margin-top: 0.5rem;
 }
 
 .logo-img {
@@ -446,17 +447,17 @@ body {
 .content-left {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .title-container {
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .section-title-image {
   max-width: 100%;
   height: auto;
-  max-height: 120px;
+  max-height: 50px;
   object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
@@ -541,12 +542,16 @@ body {
 
 .cta-button {
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   font-family: 'Helvetica Neue Light';
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px) saturate(100%) contrast(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(110%);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   position: relative;
@@ -645,7 +650,7 @@ body {
   }
   
   .section-title-image {
-    max-height: 80px;
+    max-height: 50px;
   }
   
   .video-container {
@@ -699,7 +704,7 @@ body {
   }
   
   .section-title-image {
-    max-height: 60px;
+    max-height: 50px;
   }
   
   .video-container {
