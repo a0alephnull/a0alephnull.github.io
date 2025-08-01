@@ -1,19 +1,26 @@
 @font-face {
-    font-family: 'Helvetica Neue Light';
-    src: url(fonts/HelveticaNeue-Light.woff);
-    src: url(fonts/HelveticaNeue-Light.woff2);
+    font-family: 'DMSans Light';
+    src: url(fonts/DMSans-Light.ttf);
 }
 
 @font-face {
-    font-family: 'Helvetica Neue Bold';
-    src: url(fonts/HelveticaNeue-Bold.woff);
-    src: url(fonts/HelveticaNeue-Bold.woff2);
+    font-family: 'DMSans Bold';
+    src: url(fonts/DMSans-Bold.woff);
 }
 
 @font-face {
-    font-family: 'Helvetica Neue Medium';
-    src: url(fonts/HelveticaNeue-Medium.woff);
-    src: url(fonts/HelveticaNeue-Medium.woff2);
+    font-family: 'DMSans Medium';
+    src: url(fonts/DMSns-Medium.woff);
+}
+
+@font-face {
+    font-family: 'Caudex Regular';
+    src: url(fonts/Caudex-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Caudex Bold';
+    src: url(fonts/Caudex-Bold.ttf);
 }
 
 @keyframes bg-noise-animation {
@@ -125,7 +132,7 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue Light';
+  font-family: 'DMSans Light';
   font-weight: 100;
   background-color: transparent;
   color: #ffffff;
@@ -302,7 +309,7 @@ body {
 .nav-link {
   color: #ffffff;
   text-decoration: none;
-  font-family: 'Helvetica Neue Light';
+  font-family: 'DMSans Light';
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -378,7 +385,7 @@ body {
 
 .email-text {
   color: #ffffff;
-  font-family: 'Helvetica Neue Light';
+  font-family: 'DMSans Light';
   font-size: 0.9rem;
   opacity: 0;
   transform: translateX(-20px);
@@ -463,7 +470,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Caudex', serif;
+  font-family: 'Caudex Bold', serif;
   font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
@@ -473,7 +480,7 @@ body {
 }
 
 .section-subtitle {
-  font-family: 'Helvetica Neue Light';
+  font-family: 'DMSans Light';
   font-size: 1.5rem;
   color: #ffffff;
   margin: 0;
@@ -484,7 +491,7 @@ body {
 }
 
 .section-description {
-  font-family: 'Helvetica Neue Light';
+  font-family: 'DMSans Light';
   font-size: 1.1rem;
   color: #ffffff;
   line-height: 1.7;
@@ -543,7 +550,7 @@ body {
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2rem;
-  font-family: 'Helvetica Neue Light';
+  font-family: 'DMSans Light';
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
