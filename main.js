@@ -1,14 +1,4 @@
-// Scroll-based Navigation Effect
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('.main-nav');
-  if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-});
-
-// Email dropdown
+// EMAIL DROPDOWN
 const emailLink = document.getElementById('email-nav-link');
 const emailContainer = emailLink.closest('.email-container');
 const navMenu = document.querySelector('.nav-menu');
@@ -23,19 +13,35 @@ emailIcon.addEventListener('click', (e) => {
   e.preventDefault();
   e.stopPropagation();
   
-  console.log('Icon clicked, current state:', isEmailExpanded); // Debug log
+  const mainNav = document.querySelector('.main-nav');
   
   if (!isEmailExpanded) {
     // Expand the email
     emailContainer.classList.add('expanded');
     navMenu.classList.add('email-expanded');
+    mainNav.classList.add('email-expanded');
     isEmailExpanded = true;
   } else {
     // Collapse the email
     emailContainer.classList.remove('expanded');
     navMenu.classList.remove('email-expanded');
+    mainNav.classList.remove('email-expanded');
     isEmailExpanded = false;
   }
+});
+
+// Smooth scroll behavior for any internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
 });
 
 // Handle text selection events
@@ -89,13 +95,25 @@ emailLink.addEventListener('dragstart', (e) => {
 // Close email when clicking elsewhere
 document.addEventListener('click', (e) => {
   if (!emailContainer.contains(e.target) && isEmailExpanded) {
+    const mainNav = document.querySelector('.main-nav');
     emailContainer.classList.remove('expanded');
     navMenu.classList.remove('email-expanded');
+    mainNav.classList.remove('email-expanded'); // Add this line
     isEmailExpanded = false;
   }
 });
 
-//End Email Dropdown
+//END EMAIL DROPDOWN
+
+// Nav scroll functionality
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.main-nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
