@@ -141,6 +141,10 @@ body {
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Background Styles */
 .td-background {
   position: fixed;
